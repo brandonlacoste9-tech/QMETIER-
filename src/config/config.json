@@ -1,0 +1,37 @@
+{
+  "app": {
+    "name": "DevisPro",
+    "version": "1.0.0",
+    "port": 3000,
+    "language": "fr-CA",
+    "timezone": "America/Montreal"
+  },
+  "rbq": {
+    "apiEndpoint": "https://api.rbq.gouv.qc.ca/licenses",
+    "validLicenseTypes": ["CMEQ", "CMMTQ"],
+    "verificationInterval": 86400000
+  },
+  "payments": {
+    "method": "interac-e-transfer",
+    "commissionRate": 0.15,
+    "model": "commission-on-win"
+  },
+  "notifications": {
+    "whatsapp": {
+      "enabled": true,
+      "apiKey": "YOUR_WHATSAPP_API_KEY"
+    },
+    "sms": {
+      "enabled": true,
+      "provider": "twilio",
+      "apiKey": "YOUR_SMS_API_KEY"
+    }
+  },
+  "compliance": {
+    "bill101": true,
+    "codeConstruction": {
+      "article": 46,
+      "enforced": true
+    }
+  }
+}
