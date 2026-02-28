@@ -1,0 +1,118 @@
+{
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "languageDescription": "Choose your preferred interface language"
+  },
+  "common": {
+    "language": "Language",
+    "english": "English",
+    "french": "Français",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit"
+  },
+  "nav": {
+    "home": "Home",
+    "findPros": "Find Professionals",
+    "postProject": "Post a Project",
+    "howItWorks": "How It Works",
+    "login": "Login",
+    "signup": "Sign Up",
+    "dashboard": "Dashboard",
+    "credits": "Credits",
+    "profile": "Profile"
+  },
+  "home": {
+    "title": "Find the Perfect Professional",
+    "subtitle": "AI-powered matching for your projects across Canada",
+    "cta": "Get Started",
+    "feature1Title": "Post Your Project",
+    "feature1Desc": "Describe what you need and let AI find the best matches",
+    "feature2Title": "Get Matched",
+    "feature2Desc": "Semantic embeddings find professionals with the right skills",
+    "feature3Title": "Hire with Confidence",
+    "feature3Desc": "Review quotes and ratings to make the best choice"
+  },
+  "project": {
+    "create": "Create a Project",
+    "title": "Project Title",
+    "description": "Project Description",
+    "category": "Category",
+    "skills": "Required Skills",
+    "location": "Location",
+    "budget": "Budget",
+    "titlePlaceholder": "e.g., Fix leaking kitchen sink",
+    "descriptionPlaceholder": "Describe your project in detail...",
+    "whatDoYouNeed": "What do you need?",
+    "locationAndSkills": "Location & Skills",
+    "reviewAndPost": "Review & Post",
+    "locationHelp": "We've detected your location to find nearby professionals",
+    "createProject": "Create Project"
+  },
+  "professional": {
+    "rating": "Rating",
+    "reviews": "reviews",
+    "milesAway": "miles away",
+    "matchScore": "Match Score",
+    "viewProfile": "View Profile",
+    "submitQuote": "Submit Quote",
+    "skills": "Skills",
+    "experience": "Experience",
+    "availability": "Availability"
+  },
+  "credits": {
+    "title": "Purchase Credit Packs",
+    "subtitle": "Credits are used to submit quotes on customer projects",
+    "credits": "Credits",
+    "perCredit": "per credit",
+    "purchase": "Purchase",
+    "processing": "Processing...",
+    "balance": "Credit Balance",
+    "pack12": "12 Credits - $17.99",
+    "pack24": "24 Credits - $34.99",
+    "pack60": "60 Credits - $84.99"
+  },
+  "quote": {
+    "submit": "Submit Quote",
+    "amount": "Quote Amount",
+    "message": "Message to Customer",
+    "creditsRequired": "Credits Required",
+    "submitSuccess": "Quote submitted successfully!",
+    "insufficientCredits": "Insufficient credits. Please purchase more.",
+    "pending": "Pending",
+    "accepted": "Accepted",
+    "rejected": "Rejected"
+  },
+  "location": {
+    "yourLocation": "Your Location",
+    "detectLocation": "Detect Location",
+    "detecting": "Detecting location...",
+    "detectionFailed": "Could not detect location. Please enter manually.",
+    "change": "Change",
+    "permissionDenied": "Location permission denied. Please enable in browser settings.",
+    "notInCanada": "Location appears to be outside Canada"
+  },
+    "bc": "British Columbia",
+    "ab": "Alberta",
+    "sk": "Saskatchewan",
+    "mb": "Manitoba",
+    "on": "Ontario",
+    "qc": "Quebec",
+    "nb": "New Brunswick",
+    "ns": "Nova Scotia",
+    "pe": "Prince Edward Island",
+    "nl": "Newfoundland and Labrador",
+    "yt": "Yukon",
+    "nt": "Northwest Territories",
+    "nu": "Nunavut"
+  }
+}

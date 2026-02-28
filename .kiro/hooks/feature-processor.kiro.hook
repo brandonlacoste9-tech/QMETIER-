@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "Feature Processor",
+  "description": "Automatically processes new feature requests in features/ directory",
+  "version": "1",
+  "when": {
+    "type": "fileCreated",
+    "patterns": ["features/*.md"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A new feature request was created. Read the feature file and implement all required code (backend API, frontend UI, tests, Dockerfiles). Follow the Q-MÉTIER design patterns from .kiro/specs/qmetier-ai-autonomous-platform/design.md"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "settings": {
+    "title": "Paramètres",
+    "language": "Langue",
+    "languageDescription": "Choisissez votre langue préférée pour l'interface"
+  },
+  "common": {
+    "language": "Langue",
+    "english": "English",
+    "french": "Français",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "back": "Retour",
+    "next": "Suivant",
+    "submit": "Soumettre"
+  },
+  "nav": {
+    "home": "Accueil",
+    "findPros": "Trouver des professionnels",
+    "postProject": "Publier un projet",
+    "howItWorks": "Comment ça marche",
+    "login": "Connexion",
+    "signup": "S'inscrire",
+    "dashboard": "Tableau de bord",
+    "credits": "Crédits",
+    "profile": "Profil"
+  },
+  "home": {
+    "title": "Trouvez le professionnel parfait",
+    "subtitle": "Plateforme québécoise de services professionnels alimentée par l'IA",
+    "cta": "Commencer",
+    "feature1Title": "Publiez votre projet",
+    "feature1Desc": "Décrivez ce dont vous avez besoin et laissez l'IA trouver les meilleures correspondances",
+    "feature2Title": "Obtenez des correspondances",
+    "feature2Desc": "Les embeddings sémantiques trouvent des professionnels avec les bonnes compétences",
+    "feature3Title": "Embauchez en toute confiance",
+    "feature3Desc": "Examinez les soumissions et les évaluations pour faire le meilleur choix"
+  },
+  "project": {
+    "create": "Créer un projet",
+    "title": "Titre du projet",
+    "description": "Description du projet",
+    "category": "Catégorie",
+    "skills": "Compétences requises",
+    "location": "Emplacement",
+    "budget": "Budget",
+    "titlePlaceholder": "ex: Réparer un évier de cuisine qui fuit",
+    "descriptionPlaceholder": "Décrivez votre projet en détail...",
+    "whatDoYouNeed": "De quoi avez-vous besoin?",
+    "locationAndSkills": "Emplacement et compétences",
+    "reviewAndPost": "Réviser et publier",
+    "locationHelp": "Nous avons détecté votre emplacement pour trouver des professionnels à proximité",
+    "createProject": "Créer le projet"
+  },
+  "professional": {
+    "rating": "Évaluation",
+    "reviews": "avis",
+    "milesAway": "milles de distance",
+    "matchScore": "Score de correspondance",
+    "viewProfile": "Voir le profil",
+    "submitQuote": "Soumettre une soumission",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "availability": "Disponibilité"
+  },
+  "credits": {
+    "title": "Acheter des forfaits de crédits",
+    "subtitle": "Les crédits sont utilisés pour soumettre des soumissions sur les projets des clients",
+    "credits": "Crédits",
+    "perCredit": "par crédit",
+    "purchase": "Acheter",
+    "processing": "Traitement...",
+    "balance": "Solde de crédits",
+    "pack12": "12 crédits - 17,99 $",
+    "pack24": "24 crédits - 34,99 $",
+    "pack60": "60 crédits - 84,99 $"
+  },
+  "quote": {
+    "submit": "Soumettre une soumission",
+    "amount": "Montant de la soumission",
+    "message": "Message au client",
+    "creditsRequired": "Crédits requis",
+    "submitSuccess": "Soumission envoyée avec succès!",
+    "insufficientCredits": "Crédits insuffisants. Veuillez en acheter davantage.",
+    "pending": "En attente",
+    "accepted": "Acceptée",
+    "rejected": "Rejetée"
+  },
+  "location": {
+    "yourLocation": "Votre emplacement",
+    "detectLocation": "Détecter l'emplacement",
+    "detecting": "Détection de l'emplacement...",
+    "detectionFailed": "Impossible de détecter l'emplacement. Veuillez saisir manuellement.",
+    "change": "Modifier",
+    "permissionDenied": "Permission de localisation refusée. Veuillez activer dans les paramètres du navigateur.",
+    "notInCanada": "L'emplacement semble être en dehors du Canada"
+  },
+    "bc": "Colombie-Britannique",
+    "ab": "Alberta",
+    "sk": "Saskatchewan",
+    "mb": "Manitoba",
+    "on": "Ontario",
+    "qc": "Québec",
+    "nb": "Nouveau-Brunswick",
+    "ns": "Nouvelle-Écosse",
+    "pe": "Île-du-Prince-Édouard",
+    "nl": "Terre-Neuve-et-Labrador",
+    "yt": "Yukon",
+    "nt": "Territoires du Nord-Ouest",
+    "nu": "Nunavut"
+  }
+}

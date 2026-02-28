@@ -1,0 +1,41 @@
+api:
+  image: ghcr.io/qmetier/api:latest
+  replicas: 2
+  resources:
+    limits:
+      cpu: 1000m
+      memory: 1Gi
+    requests:
+      cpu: 500m
+      memory: 512Mi
+
+ui:
+  image: ghcr.io/qmetier/ui:latest
+  replicas: 2
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 250m
+      memory: 256Mi
+
+matcher:
+  image: ghcr.io/qmetier/matcher:latest
+  replicas: 1
+  resources:
+    limits:
+      cpu: 1000m
+      memory: 1Gi
+    requests:
+      cpu: 500m
+      memory: 512Mi
+
+postgres:
+  enabled: true
+  image: ankane/pgvector:latest
+  storage: 10Gi
+
+redis:
+  enabled: true
+  image: redis:7
