@@ -137,3 +137,9 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# DevisPro generated data files
+data/contractors/validation-*.json
+data/leads/lead-*.json
+data/payments/payment-*.json
+data/notifications/notifications-*.json
