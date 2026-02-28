@@ -1,0 +1,57 @@
+{
+  "leads": [
+    {
+      "id": "LEAD-1709100000000",
+      "customer": {
+        "name": "Sophie Lavoie",
+        "email": "sophie.lavoie@example.com",
+        "phone": "514-555-3001"
+      },
+      "serviceType": "Électricité",
+      "description": "Installation complète du système électrique pour nouvelle construction résidentielle. Maison de 2 étages, 3 chambres.",
+      "location": "123 Rue Saint-Denis, Montréal, QC H2X 3K8",
+      "region": "Montreal",
+      "estimatedBudget": "10000$ - 25000$",
+      "urgency": "normal",
+      "status": "new",
+      "commission": 2250,
+      "createdAt": "2026-02-28T06:30:00.000Z"
+    },
+    {
+      "id": "LEAD-1709100000001",
+      "customer": {
+        "name": "Marc Bélanger",
+        "email": "marc.belanger@example.com",
+        "phone": "514-555-3002"
+      },
+      "serviceType": "Plomberie",
+      "description": "Réparation urgente de fuite d'eau dans la salle de bain principale. L'eau coule sous l'évier.",
+      "location": "456 Avenue Papineau, Montréal, QC H2K 4J5",
+      "region": "Montreal",
+      "estimatedBudget": "1000$ - 5000$",
+      "urgency": "high",
+      "status": "new",
+      "commission": 450,
+      "createdAt": "2026-02-28T07:00:00.000Z"
+    },
+    {
+      "id": "LEAD-1709100000002",
+      "customer": {
+        "name": "Lucie Bergeron",
+        "email": "lucie.bergeron@example.com",
+        "phone": "418-555-4001"
+      },
+      "serviceType": "Chauffage",
+      "description": "Remplacement du système de chauffage au gaz pour une maison de 150m². Besoin d'une pompe à chaleur moderne.",
+      "location": "789 Rue Saint-Jean, Québec, QC G1R 1R3",
+      "region": "Quebec",
+      "estimatedBudget": "10000$ - 25000$",
+      "urgency": "normal",
+      "status": "distributed",
+      "commission": 2250,
+      "createdAt": "2026-02-27T15:45:00.000Z",
+      "distributedAt": "2026-02-27T16:00:00.000Z"
+    }
+  ],
+  "lastUpdated": "2026-02-28T07:18:00.000Z"
+}

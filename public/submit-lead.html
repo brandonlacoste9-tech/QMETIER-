@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtenir des Devis - DevisPro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #003d7a;
+            --accent-color: #00a651;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f5f8fa;
+            --white: #ffffff;
+            --border-color: #ddd;
+            --success: #28a745;
+            --error: #dc3545;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .back-link {
+            color: var(--white);
+            text-decoration: none;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .form-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .benefits {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .benefits h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefits li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .benefits li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .required {
+            color: var(--error);
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .help-text {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.25rem;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary:disabled {
+            background-color: var(--text-light);
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .alert {
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .alert-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        @media (max-width: 768px) {
+            .form-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">🏗️ DevisPro</div>
+            <a href="/" class="back-link">← Retour à l'Accueil</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-card">
+            <h1>Obtenir des Devis Gratuits</h1>
+            <p class="subtitle">
+                Décrivez votre projet et recevez jusqu'à 3 devis d'entrepreneurs RBQ vérifiés. 
+                100% gratuit, sans engagement.
+            </p>
+
+            <div class="benefits">
+                <h3>✨ Avantages DevisPro</h3>
+                <ul>
+                    <li>Entrepreneurs RBQ vérifiés (CMEQ/CMMTQ)</li>
+                    <li>Conformité Code de construction Article 46</li>
+                    <li>Jusqu'à 3 devis comparatifs</li>
+                    <li>Service gratuit pour les clients</li>
+                    <li>Réponse rapide par WhatsApp/SMS</li>
+                    <li>Protection 15% commission au succès</li>
+                </ul>
+            </div>
+
+            <div id="alertContainer"></div>
+
+            <form id="leadForm">
+                <div class="form-group">
+                    <label for="customerName">
+                        Nom Complet <span class="required">*</span>
+                    </label>
+                    <input type="text" id="customerName" name="customerName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        Courriel <span class="required">*</span>
+                    </label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">
+                        Téléphone <span class="required">*</span>
+                    </label>
+                    <input type="tel" id="phone" name="phone" placeholder="514-555-1234" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceType">
+                        Type de Service <span class="required">*</span>
+                    </label>
+                    <select id="serviceType" name="serviceType" required>
+                        <option value="">Sélectionner...</option>
+                        <option value="Électricité">Électricité</option>
+                        <option value="Plomberie">Plomberie</option>
+                        <option value="Chauffage">Chauffage</option>
+                        <option value="Climatisation">Climatisation</option>
+                        <option value="Ventilation">Ventilation</option>
+                        <option value="Réfrigération">Réfrigération</option>
+                        <option value="Installation">Installation Complète</option>
+                        <option value="Réparation">Réparation</option>
+                        <option value="Entretien">Entretien</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">
+                        Description du Projet <span class="required">*</span>
+                    </label>
+                    <textarea id="description" name="description" required 
+                              placeholder="Décrivez en détail votre projet, les travaux requis, les contraintes particulières, etc."></textarea>
+                    <div class="help-text">Plus vous fournissez de détails, plus les devis seront précis.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">
+                        Adresse Complète <span class="required">*</span>
+                    </label>
+                    <input type="text" id="location" name="location" 
+                           placeholder="123 Rue Principale, Montréal, QC H1A 1A1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="region">
+                        Région <span class="required">*</span>
+                    </label>
+                    <select id="region" name="region" required>
+                        <option value="">Sélectionner...</option>
+                        <option value="Montreal">Montréal</option>
+                        <option value="Quebec">Québec</option>
+                        <option value="Laval">Laval</option>
+                        <option value="Gatineau">Gatineau</option>
+                        <option value="Sherbrooke">Sherbrooke</option>
+                        <option value="Longueuil">Longueuil</option>
+                        <option value="Trois-Rivières">Trois-Rivières</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="estimatedBudget">
+                        Budget Estimé (optionnel)
+                    </label>
+                    <select id="estimatedBudget" name="estimatedBudget">
+                        <option value="">Préférez ne pas dire</option>
+                        <option value="Moins de 1000$">Moins de 1 000$</option>
+                        <option value="1000$ - 5000$">1 000$ - 5 000$</option>
+                        <option value="5000$ - 10000$">5 000$ - 10 000$</option>
+                        <option value="10000$ - 25000$">10 000$ - 25 000$</option>
+                        <option value="25000$ - 50000$">25 000$ - 50 000$</option>
+                        <option value="Plus de 50000$">Plus de 50 000$</option>
+                    </select>
+                    <div class="help-text">Cette information aide les entrepreneurs à préparer des devis appropriés.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="urgency">
+                        Urgence <span class="required">*</span>
+                    </label>
+                    <select id="urgency" name="urgency" required>
+                        <option value="normal">Normal - Dans les prochaines semaines</option>
+                        <option value="high">Urgent - Dans les prochains jours</option>
+                        <option value="low">Pas pressé - Dans les prochains mois</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn btn-primary">
+                    📨 Envoyer Ma Demande de Devis
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('leadForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const alertContainer = document.getElementById('alertContainer');
+
+        function showAlert(message, type) {
+            const alert = document.createElement('div');
+            alert.className = `alert alert-${type}`;
+            alert.textContent = message;
+            alertContainer.innerHTML = '';
+            alertContainer.appendChild(alert);
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            if (type === 'success') {
+                setTimeout(() => {
+                    alert.remove();
+                }, 5000);
+            }
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const data = {
+                customerName: formData.get('customerName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                serviceType: formData.get('serviceType'),
+                description: formData.get('description'),
+                location: formData.get('location'),
+                region: formData.get('region'),
+                estimatedBudget: formData.get('estimatedBudget'),
+                urgency: formData.get('urgency')
+            };
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = '⏳ Envoi en cours...';
+
+            try {
+                const response = await fetch('/api/leads/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showAlert(`✅ ${result.message}\n\nNuméro de demande: ${result.lead.id}\n\nVous recevrez jusqu'à 3 devis d'entrepreneurs vérifiés sous peu.`, 'success');
+                    form.reset();
+                    
+                    setTimeout(() => {
+                        window.location.href = '/';
+                    }, 3000);
+                } else {
+                    showAlert(`❌ ${result.error}`, 'error');
+                }
+            } catch (error) {
+                showAlert('❌ Erreur lors de l\'envoi de la demande. Veuillez réessayer.', 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = '📨 Envoyer Ma Demande de Devis';
+            }
+        });
+    </script>
+</body>
+</html>

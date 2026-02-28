@@ -1,0 +1,24 @@
+{
+  "name": "devispro-quebec",
+  "version": "1.0.0",
+  "description": "A localized Thumbtack/HomeAdvisor clone for Quebec's construction market with RBQ license verification",
+  "main": "src/backend/server.js",
+  "scripts": {
+    "start": "node src/backend/server.js",
+    "dev": "node src/backend/server.js",
+    "test": "echo \"No tests specified yet\" && exit 0",
+    "automation": "pwsh src/automation/openclaw-engine.ps1"
+  },
+  "keywords": [
+    "quebec",
+    "construction",
+    "rbq",
+    "marketplace",
+    "contractors"
+  ],
+  "author": "DevisPro",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

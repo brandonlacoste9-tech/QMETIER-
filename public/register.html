@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Entrepreneur - DevisPro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #003d7a;
+            --accent-color: #00a651;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f5f8fa;
+            --white: #ffffff;
+            --border-color: #ddd;
+            --success: #28a745;
+            --error: #dc3545;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .back-link {
+            color: var(--white);
+            text-decoration: none;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .form-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .required {
+            color: var(--error);
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .help-text {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.25rem;
+        }
+        
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.5rem;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+        }
+        
+        .checkbox-label input {
+            width: auto;
+            margin-right: 0.5rem;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary:disabled {
+            background-color: var(--text-light);
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .alert {
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .alert-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .license-validator {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+        
+        .validator-result {
+            display: none;
+            margin-top: 0.5rem;
+            padding: 0.75rem;
+            border-radius: 5px;
+        }
+        
+        .validator-result.success {
+            display: block;
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .validator-result.error {
+            display: block;
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        @media (max-width: 768px) {
+            .form-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">🏗️ DevisPro</div>
+            <a href="/" class="back-link">← Retour à l'Accueil</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-card">
+            <h1>Inscription Entrepreneur</h1>
+            <p class="subtitle">
+                Rejoignez les 40,000+ entrepreneurs RBQ du Québec. 
+                Validation automatique de votre licence en temps réel.
+            </p>
+
+            <div id="alertContainer"></div>
+
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="businessName">
+                        Nom de l'Entreprise <span class="required">*</span>
+                    </label>
+                    <input type="text" id="businessName" name="businessName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">
+                        Nom du Contact Principal <span class="required">*</span>
+                    </label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        Courriel <span class="required">*</span>
+                    </label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">
+                        Téléphone <span class="required">*</span>
+                    </label>
+                    <input type="tel" id="phone" name="phone" placeholder="514-555-1234" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="whatsapp">
+                        WhatsApp (optionnel)
+                    </label>
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="514-555-1234">
+                    <div class="help-text">Laissez vide pour utiliser le même numéro que le téléphone</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="rbqLicenseType">
+                        Type de Licence RBQ <span class="required">*</span>
+                    </label>
+                    <select id="rbqLicenseType" name="rbqLicenseType" required>
+                        <option value="">Sélectionner...</option>
+                        <option value="CMEQ">CMEQ (Électricité)</option>
+                        <option value="CMMTQ">CMMTQ (Mécanique du bâtiment)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="rbqLicenseNumber">
+                        Numéro de Licence RBQ <span class="required">*</span>
+                    </label>
+                    <input type="text" id="rbqLicenseNumber" name="rbqLicenseNumber" 
+                           placeholder="1234-5678-90" required pattern="\d{4}-\d{4}-\d{2}">
+                    <div class="help-text">Format: 1234-5678-90</div>
+                    
+                    <div class="license-validator">
+                        <button type="button" id="validateBtn" class="btn btn-primary" style="width: auto; padding: 0.5rem 1rem;">
+                            🔍 Valider la Licence RBQ
+                        </button>
+                        <div id="validatorResult" class="validator-result"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        Spécialisations <span class="required">*</span>
+                    </label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="specializations" value="Électricité">
+                            Électricité
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="specializations" value="Plomberie">
+                            Plomberie
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="specializations" value="Chauffage">
+                            Chauffage
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="specializations" value="Climatisation">
+                            Climatisation
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="specializations" value="Ventilation">
+                            Ventilation
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="specializations" value="Réfrigération">
+                            Réfrigération
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        Régions Desservies <span class="required">*</span>
+                    </label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="serviceAreas" value="Montreal">
+                            Montréal
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="serviceAreas" value="Quebec">
+                            Québec
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="serviceAreas" value="Laval">
+                            Laval
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="serviceAreas" value="Gatineau">
+                            Gatineau
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="serviceAreas" value="Sherbrooke">
+                            Sherbrooke
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="serviceAreas" value="All">
+                            Partout au Québec
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn btn-primary">
+                    📝 Créer Mon Profil Entrepreneur
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('registrationForm');
+        const validateBtn = document.getElementById('validateBtn');
+        const submitBtn = document.getElementById('submitBtn');
+        const validatorResult = document.getElementById('validatorResult');
+        const alertContainer = document.getElementById('alertContainer');
+
+        // Validate RBQ License
+        validateBtn.addEventListener('click', async () => {
+            const licenseNumber = document.getElementById('rbqLicenseNumber').value;
+            const licenseType = document.getElementById('rbqLicenseType').value;
+
+            if (!licenseNumber || !licenseType) {
+                showValidator('Veuillez remplir le numéro et le type de licence', 'error');
+                return;
+            }
+
+            validateBtn.disabled = true;
+            validateBtn.textContent = '⏳ Validation...';
+
+            try {
+                const response = await fetch('/api/rbq/validate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ licenseNumber, licenseType })
+                });
+
+                const data = await response.json();
+
+                if (data.valid) {
+                    showValidator(`✅ Licence valide: ${data.licensee} | Statut: ${data.status} | Expire: ${data.expiryDate}`, 'success');
+                } else {
+                    showValidator(`❌ ${data.error}`, 'error');
+                }
+            } catch (error) {
+                showValidator('❌ Erreur de validation', 'error');
+            } finally {
+                validateBtn.disabled = false;
+                validateBtn.textContent = '🔍 Valider la Licence RBQ';
+            }
+        });
+
+        function showValidator(message, type) {
+            validatorResult.textContent = message;
+            validatorResult.className = `validator-result ${type}`;
+        }
+
+        function showAlert(message, type) {
+            const alert = document.createElement('div');
+            alert.className = `alert alert-${type}`;
+            alert.textContent = message;
+            alertContainer.innerHTML = '';
+            alertContainer.appendChild(alert);
+            
+            setTimeout(() => {
+                alert.remove();
+            }, 5000);
+        }
+
+        // Form submission
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const specializations = Array.from(formData.getAll('specializations'));
+            const serviceAreas = Array.from(formData.getAll('serviceAreas'));
+
+            if (specializations.length === 0) {
+                showAlert('Veuillez sélectionner au moins une spécialisation', 'error');
+                return;
+            }
+
+            if (serviceAreas.length === 0) {
+                showAlert('Veuillez sélectionner au moins une région', 'error');
+                return;
+            }
+
+            const data = {
+                name: formData.get('name'),
+                businessName: formData.get('businessName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                whatsapp: formData.get('whatsapp'),
+                rbqLicenseNumber: formData.get('rbqLicenseNumber'),
+                rbqLicenseType: formData.get('rbqLicenseType'),
+                specializations,
+                serviceAreas
+            };
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = '⏳ Inscription en cours...';
+
+            try {
+                const response = await fetch('/api/contractors/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showAlert(`✅ ${result.message}`, 'success');
+                    form.reset();
+                    validatorResult.className = 'validator-result';
+                    
+                    setTimeout(() => {
+                        window.location.href = '/';
+                    }, 2000);
+                } else {
+                    showAlert(`❌ ${result.error}`, 'error');
+                }
+            } catch (error) {
+                showAlert('❌ Erreur lors de l\'inscription', 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = '📝 Créer Mon Profil Entrepreneur';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+{
+  "contractors": [
+    {
+      "id": "CTR-1709100000000",
+      "name": "Jean Tremblay",
+      "businessName": "Électricité Tremblay Inc.",
+      "email": "jean.tremblay@example.com",
+      "contact": {
+        "phone": "514-555-1001",
+        "whatsapp": "514-555-1001"
+      },
+      "rbqLicense": {
+        "number": "1234-5678-01",
+        "type": "CMEQ",
+        "valid": true,
+        "validatedAt": "2026-02-28T07:00:00.000Z",
+        "licensee": "Électricité Tremblay Inc.",
+        "status": "Actif",
+        "expiryDate": "2027-02-28",
+        "specializations": ["Électricité"],
+        "article46Compliant": true
+      },
+      "specializations": ["Électricité"],
+      "serviceAreas": ["Montreal", "Laval"],
+      "rating": 4.8,
+      "completedProjects": 156,
+      "status": "active",
+      "createdAt": "2025-01-15T10:30:00.000Z"
+    },
+    {
+      "id": "CTR-1709100000001",
+      "name": "Marie Dubois",
+      "businessName": "Plomberie Dubois",
+      "email": "marie.dubois@example.com",
+      "contact": {
+        "phone": "514-555-1002",
+        "whatsapp": "514-555-1002"
+      },
+      "rbqLicense": {
+        "number": "2345-6789-02",
+        "type": "CMMTQ",
+        "valid": true,
+        "validatedAt": "2026-02-28T07:00:00.000Z",
+        "licensee": "Plomberie Dubois",
+        "status": "Actif",
+        "expiryDate": "2027-02-28",
+        "specializations": ["Plomberie", "Chauffage"],
+        "article46Compliant": true
+      },
+      "specializations": ["Plomberie", "Chauffage"],
+      "serviceAreas": ["Montreal", "Quebec"],
+      "rating": 4.9,
+      "completedProjects": 203,
+      "status": "active",
+      "createdAt": "2025-02-01T09:15:00.000Z"
+    },
+    {
+      "id": "CTR-1709100000002",
+      "name": "Pierre Gagnon",
+      "businessName": "HVAC Pro Québec",
+      "email": "pierre.gagnon@example.com",
+      "contact": {
+        "phone": "418-555-2001",
+        "whatsapp": "418-555-2001"
+      },
+      "rbqLicense": {
+        "number": "3456-7890-03",
+        "type": "CMMTQ",
+        "valid": true,
+        "validatedAt": "2026-02-28T07:00:00.000Z",
+        "licensee": "HVAC Pro Québec",
+        "status": "Actif",
+        "expiryDate": "2027-02-28",
+        "specializations": ["Chauffage", "Climatisation", "Ventilation"],
+        "article46Compliant": true
+      },
+      "specializations": ["Chauffage", "Climatisation", "Ventilation"],
+      "serviceAreas": ["Quebec", "Sherbrooke"],
+      "rating": 5.0,
+      "completedProjects": 89,
+      "status": "active",
+      "createdAt": "2025-03-10T14:20:00.000Z"
+    }
+  ],
+  "lastUpdated": "2026-02-28T07:18:00.000Z"
+}

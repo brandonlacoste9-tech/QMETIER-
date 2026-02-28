@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DevisPro - Plateforme de mise en relation pour entrepreneurs RBQ au Québec">
+    <title>DevisPro - Marketplace de Construction Québec | RBQ Vérifié</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #003d7a;
+            --accent-color: #00a651;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f5f8fa;
+            --white: #ffffff;
+            --border-color: #ddd;
+            --success: #28a745;
+            --warning: #ffc107;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .nav a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+        
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+        
+        /* Features Section */
+        .features {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--secondary-color);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: var(--white);
+            padding: 3rem 2rem;
+            margin: 4rem 0;
+        }
+        
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .step {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.9;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        
+        .compliance-badge {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                🏗️ DevisPro
+            </div>
+            <nav class="nav">
+                <a href="/">Accueil</a>
+                <a href="/register">Entrepreneurs</a>
+                <a href="/submit-lead">Obtenir des Devis</a>
+                <a href="#features">Fonctionnalités</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Marketplace de Construction pour le Québec</h1>
+            <p>
+                La première plateforme dédiée aux entrepreneurs RBQ du Québec. 
+                Vérification automatique des licences CMEQ/CMMTQ et conformité à l'Article 46 du Code de construction.
+            </p>
+            <div class="cta-buttons">
+                <a href="/register" class="btn btn-primary">
+                    Je suis Entrepreneur - M'inscrire
+                </a>
+                <a href="/submit-lead" class="btn btn-secondary">
+                    J'ai besoin d'un Entrepreneur
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>40,000+</h3>
+                <p>Entrepreneurs RBQ ciblés</p>
+            </div>
+            <div class="stat-item">
+                <h3>15%</h3>
+                <p>Commission au succès</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Licences vérifiées</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Distribution automatique</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-title">Fonctionnalités Clés</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>Moteur OpenClaw</h3>
+                <p>
+                    Automatisation PowerShell pour la distribution intelligente des leads 
+                    aux entrepreneurs qualifiés en temps réel.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3>Validation RBQ Automatique</h3>
+                <p>
+                    Vérification en temps réel des licences CMEQ/CMMTQ auprès de la RBQ.
+                    Conformité garantie avec l'Article 46 du Code de construction.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💳</div>
+                <h3>Interac e-Transfer</h3>
+                <p>
+                    Intégration du mode de paiement préféré des Québécois. 
+                    Transactions sécurisées et instantanées.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🇫🇷</div>
+                <h3>Localisation fr-CA</h3>
+                <p>
+                    Interface 100% en français québécois. 
+                    Conformité complète avec la Loi 101 (Charte de la langue française).
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Notifications WhatsApp/SMS</h3>
+                <p>
+                    Alertes instantanées pour les nouveaux leads par WhatsApp et SMS.
+                    Réponse rapide pour maximiser les opportunités.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Commission au Succès</h3>
+                <p>
+                    Modèle 15% commission-on-win au lieu de pay-per-lead.
+                    Risque minimal pour les entrepreneurs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <h2 class="section-title">Comment ça Fonctionne</h2>
+        
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Inscription</h3>
+                <p>
+                    Créez votre profil avec votre licence RBQ. 
+                    Validation automatique en temps réel.
+                </p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Recevez des Leads</h3>
+                <p>
+                    OpenClaw distribue les leads qualifiés directement sur WhatsApp/SMS.
+                </p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Soumissionnez</h3>
+                <p>
+                    Contactez le client et soumettez votre devis.
+                    Aucun frais initial.
+                </p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Gagnez le Contrat</h3>
+                <p>
+                    Payez seulement 15% si vous décrochez le contrat.
+                    Paiement par Interac e-Transfer.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo">🏗️ DevisPro</div>
+            <p>Marketplace de Construction pour le Québec</p>
+            
+            <div class="footer-links">
+                <a href="/about">À Propos</a>
+                <a href="/privacy">Politique de Confidentialité</a>
+                <a href="/terms">Conditions d'Utilisation</a>
+                <a href="/contact">Contact</a>
+            </div>
+            
+            <div class="compliance-badge">
+                ✓ Conformité Loi 101 | ✓ Article 46 - Code de construction | ✓ Licences RBQ Vérifiées
+            </div>
+            
+            <p style="margin-top: 2rem; opacity: 0.8;">
+                © 2026 DevisPro. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Check API health on load
+        fetch('/api/health')
+            .then(response => response.json())
+            .then(data => {
+                console.log('✓ DevisPro API:', data);
+            })
+            .catch(error => {
+                console.error('API Error:', error);
+            });
+    </script>
+</body>
+</html>
