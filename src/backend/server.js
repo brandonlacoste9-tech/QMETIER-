@@ -8,19 +8,42 @@
  * - Contractor Profiles
  * - Interac e-Transfer Integration
  * - French-first Localization (fr-CA)
+ * - Rate Limiting for API Protection
  */
 
 const express = require('express');
+const rateLimit = require('express-rate-limit');
 const path = require('path');
 const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Rate limiting configuration
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // Limit each IP to 100 requests per windowMs
+    message: {
+        error: 'Trop de requêtes, veuillez réessayer plus tard / Too many requests, please try again later'
+    },
+    standardHeaders: true,
+    legacyHeaders: false,
+});
+
+// Stricter rate limit for registration and lead submission
+const strictLimiter = rateLimit({
+    windowMs: 60 * 60 * 1000, // 1 hour
+    max: 10, // Limit each IP to 10 submissions per hour
+    message: {
+        error: 'Limite de soumissions atteinte, veuillez réessayer dans une heure / Submission limit reached, please try again in an hour'
+    }
+});
+
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../../public')));
+app.use('/api/', limiter); // Apply rate limiting to all API routes
 
 // Load configuration
 const config = JSON.parse(fs.readFileSync(path.join(__dirname, '../config/config.json'), 'utf8'));
@@ -147,7 +170,7 @@ app.post('/api/rbq/validate', (req, res) => {
 });
 
 // Register Contractor
-app.post('/api/contractors/register', (req, res) => {
+app.post('/api/contractors/register', strictLimiter, (req, res) => {
     const {
         name,
         email,
@@ -253,7 +276,7 @@ app.get('/api/contractors', (req, res) => {
 });
 
 // Submit Lead
-app.post('/api/leads/submit', (req, res) => {
+app.post('/api/leads/submit', strictLimiter, (req, res) => {
     const {
         customerName,
         email,
