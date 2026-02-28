@@ -51,7 +51,24 @@
       "commission": 2250,
       "createdAt": "2026-02-27T15:45:00.000Z",
       "distributedAt": "2026-02-27T16:00:00.000Z"
+    },
+    {
+      "id": "LEAD-1772263678357",
+      "customer": {
+        "name": "Test User",
+        "email": "test@example.com",
+        "phone": "514-555-1234"
+      },
+      "serviceType": "Électricité",
+      "description": "Test project",
+      "location": "Montreal, QC",
+      "region": "Montreal",
+      "estimatedBudget": "5000$ - 10000$",
+      "urgency": "normal",
+      "status": "new",
+      "commission": 750,
+      "createdAt": "2026-02-28T07:27:58.357Z"
     }
   ],
-  "lastUpdated": "2026-02-28T07:18:00.000Z"
+  "lastUpdated": "2026-02-28T07:27:58.357Z"
 }

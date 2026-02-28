@@ -277,6 +277,16 @@ app.post('/api/leads/submit', (req, res) => {
     const leadsData = JSON.parse(fs.readFileSync(LEADS_FILE, 'utf8'));
     
     // Create lead
+    // Extract numeric value from budget range for commission calculation
+    let budgetValue = 0;
+    if (estimatedBudget && estimatedBudget !== 'Non spécifié') {
+        // Extract first number from budget range (e.g., "5000$ - 10000$" -> 5000)
+        const match = estimatedBudget.match(/(\d+)/);
+        if (match) {
+            budgetValue = parseFloat(match[1]);
+        }
+    }
+    
     const lead = {
         id: `LEAD-${Date.now()}`,
         customer: {
@@ -291,7 +301,7 @@ app.post('/api/leads/submit', (req, res) => {
         estimatedBudget: estimatedBudget || 'Non spécifié',
         urgency: urgency || 'normal',
         status: 'new',
-        commission: calculateCommission(parseFloat(estimatedBudget) || 0),
+        commission: calculateCommission(budgetValue),
         createdAt: new Date().toISOString()
     };
     
