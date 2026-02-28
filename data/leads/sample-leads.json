@@ -1,0 +1,120 @@
+[
+  {
+    "id": "LEAD-20260228-001",
+    "serviceType": "Électricité",
+    "description": "Installation d'un nouveau panneau électrique 200A pour une maison unifamiliale. Mise aux normes requise selon Code de construction du Québec.",
+    "projectValue": 8500,
+    "commission": 1275,
+    "commissionRate": 0.15,
+    "urgency": "Modéré",
+    "preferredStartDate": "2026-03-15",
+    "location": {
+      "city": "Montréal",
+      "postalCode": "H2X 1Y7",
+      "region": "Montréal"
+    },
+    "customer": {
+      "name": "Marie Tremblay",
+      "phone": "+1-514-555-0123",
+      "email": "marie.tremblay@example.com",
+      "preferredContact": "WhatsApp"
+    },
+    "status": "Distribué",
+    "submittedAt": "2026-02-28T09:15:00Z",
+    "distributedAt": "2026-02-28T09:20:00Z",
+    "assignedContractors": [
+      {
+        "contractorId": "CTR-001",
+        "contractorName": "Électrique Pro Québec Inc.",
+        "rbqLicense": "5234-8976-01",
+        "notifiedVia": ["WhatsApp", "SMS"],
+        "notificationSentAt": "2026-02-28T09:20:15Z",
+        "status": "En attente"
+      },
+      {
+        "contractorId": "CTR-003",
+        "contractorName": "Rénovation 360 Inc.",
+        "rbqLicense": "7821-4536-03",
+        "notifiedVia": ["SMS"],
+        "notificationSentAt": "2026-02-28T09:20:20Z",
+        "status": "En attente"
+      }
+    ]
+  },
+  {
+    "id": "LEAD-20260228-002",
+    "serviceType": "Plomberie",
+    "description": "Réparation de plomberie urgente - fuite au sous-sol. Remplacement de tuyauterie et installation de valve d'arrêt.",
+    "projectValue": 3200,
+    "commission": 480,
+    "commissionRate": 0.15,
+    "urgency": "Urgent",
+    "preferredStartDate": "2026-03-01",
+    "location": {
+      "city": "Québec",
+      "postalCode": "G1R 2L4",
+      "region": "Québec"
+    },
+    "customer": {
+      "name": "Pierre Dubois",
+      "phone": "+1-418-555-0456",
+      "email": "pierre.dubois@example.com",
+      "preferredContact": "SMS"
+    },
+    "status": "Distribué",
+    "submittedAt": "2026-02-28T07:30:00Z",
+    "distributedAt": "2026-02-28T07:35:00Z",
+    "assignedContractors": [
+      {
+        "contractorId": "CTR-002",
+        "contractorName": "Plomberie Excellence Ltée",
+        "rbqLicense": "6543-2109-02",
+        "notifiedVia": ["WhatsApp", "SMS"],
+        "notificationSentAt": "2026-02-28T07:35:10Z",
+        "status": "En attente"
+      }
+    ]
+  },
+  {
+    "id": "LEAD-20260228-003",
+    "serviceType": "Rénovation",
+    "description": "Rénovation complète de cuisine - démolition, plomberie, électricité, armoires, comptoirs. Environ 150 pieds carrés.",
+    "projectValue": 45000,
+    "commission": 6750,
+    "commissionRate": 0.15,
+    "urgency": "Normal",
+    "preferredStartDate": "2026-04-01",
+    "location": {
+      "city": "Laval",
+      "postalCode": "H7T 2C4",
+      "region": "Laval"
+    },
+    "customer": {
+      "name": "Sophie Gagnon",
+      "phone": "+1-450-555-0789",
+      "email": "sophie.gagnon@example.com",
+      "preferredContact": "Email"
+    },
+    "status": "Distribué",
+    "submittedAt": "2026-02-28T10:45:00Z",
+    "distributedAt": "2026-02-28T10:50:00Z",
+    "assignedContractors": [
+      {
+        "contractorId": "CTR-003",
+        "contractorName": "Rénovation 360 Inc.",
+        "rbqLicense": "7821-4536-03",
+        "notifiedVia": ["SMS"],
+        "notificationSentAt": "2026-02-28T10:50:05Z",
+        "status": "En attente"
+      },
+      {
+        "contractorId": "CTR-001",
+        "contractorName": "Électrique Pro Québec Inc.",
+        "rbqLicense": "5234-8976-01",
+        "notifiedVia": ["WhatsApp", "SMS"],
+        "notificationSentAt": "2026-02-28T10:50:10Z",
+        "status": "En attente"
+      }
+    ]
+  }
+]

@@ -1,0 +1,113 @@
+{
+  "app": {
+    "name": "DevisPro",
+    "tagline": "Trouvez des entrepreneurs qualifiés RBQ au Québec",
+    "description": "Plateforme de mise en relation entre clients et entrepreneurs licenciés RBQ"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "services": "Services",
+    "contractors": "Entrepreneurs",
+    "about": "À propos",
+    "contact": "Contact",
+    "login": "Connexion",
+    "register": "S'inscrire"
+  },
+  "services": {
+    "electricity": "Électricité",
+    "plumbing": "Plomberie",
+    "heating": "Chauffage",
+    "airConditioning": "Climatisation",
+    "renovation": "Rénovation",
+    "construction": "Construction",
+    "roofing": "Toiture",
+    "windows": "Fenêtres",
+    "insulation": "Isolation"
+  },
+  "contractor": {
+    "title": "Entrepreneurs",
+    "verified": "Vérifié RBQ",
+    "license": "Licence RBQ",
+    "rating": "Note",
+    "reviews": "Avis",
+    "specialties": "Spécialités",
+    "availability": "Disponibilité",
+    "responseRate": "Taux de réponse",
+    "projects": "Projets complétés"
+  },
+  "lead": {
+    "title": "Demande de soumission",
+    "serviceType": "Type de service",
+    "description": "Description du projet",
+    "budget": "Budget estimé",
+    "urgency": "Urgence",
+    "location": "Emplacement",
+    "contactInfo": "Coordonnées",
+    "submit": "Soumettre la demande"
+  },
+  "commission": {
+    "model": "Commission à la réussite",
+    "rate": "15% sur contrat gagné",
+    "benefit1": "Aucun frais par contrat",
+    "benefit2": "Payez seulement si vous gagnez",
+    "benefit3": "Plus avantageux que les plateformes traditionnelles"
+  },
+  "compliance": {
+    "rbqVerified": "Licence RBQ vérifiée",
+    "bill101Compliant": "Conforme à la Loi 101",
+    "codeConstruction": "Code de construction du Québec - Article 46",
+    "qualityAssured": "Qualité assurée"
+  },
+  "payment": {
+    "method": "Interac e-Transfer",
+    "secure": "Paiement sécurisé",
+    "preferred": "Méthode de paiement préférée au Québec",
+    "commission": "Commission",
+    "total": "Total"
+  },
+  "notifications": {
+    "whatsapp": "WhatsApp",
+    "sms": "SMS",
+    "email": "Courriel",
+    "instantAlerts": "Alertes instantanées",
+    "newLead": "Nouveau contrat disponible",
+    "leadAssigned": "Contrat assigné"
+  },
+  "footer": {
+    "about": "À propos de DevisPro",
+    "terms": "Conditions d'utilisation",
+    "privacy": "Politique de confidentialité",
+    "contact": "Nous contacter",
+    "copyright": "© 2026 DevisPro Québec. Tous droits réservés."
+  },
+  "forms": {
+    "required": "Requis",
+    "optional": "Optionnel",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "search": "Rechercher",
+    "filter": "Filtrer"
+  },
+  "messages": {
+    "success": "Succès!",
+    "error": "Erreur",
+    "loading": "Chargement...",
+    "noResults": "Aucun résultat trouvé",
+    "tryAgain": "Réessayer"
+  },
+  "regions": {
+    "montreal": "Montréal",
+    "quebec": "Québec",
+    "laval": "Laval",
+    "gatineau": "Gatineau",
+    "longueuil": "Longueuil",
+    "sherbrooke": "Sherbrooke",
+    "saguenay": "Saguenay",
+    "levis": "Lévis",
+    "trois-rivieres": "Trois-Rivières",
+    "terrebonne": "Terrebonne"
+  }
+}

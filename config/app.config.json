@@ -1,0 +1,43 @@
+{
+  "appName": "DevisPro",
+  "version": "1.0.0",
+  "locale": "fr-CA",
+  "region": "Quebec",
+  "compliance": {
+    "rbqValidation": true,
+    "bill101Compliant": true,
+    "codeConstruction": "Article 46"
+  },
+  "payment": {
+    "provider": "Interac",
+    "commissionRate": 0.15,
+    "pricingModel": "commission-on-win"
+  },
+  "notifications": {
+    "whatsapp": {
+      "enabled": true,
+      "apiEndpoint": "https://api.whatsapp.com/send"
+    },
+    "sms": {
+      "enabled": true,
+      "provider": "Twilio"
+    }
+  },
+  "rbq": {
+    "apiEndpoint": "https://www.rbq.gouv.qc.ca/services/api",
+    "licenseTypes": ["CMEQ", "CMMTQ"],
+    "validationInterval": 86400
+  },
+  "targetContractors": 40000,
+  "supportedServices": [
+    "Électricité",
+    "Plomberie",
+    "Chauffage",
+    "Climatisation",
+    "Rénovation",
+    "Construction",
+    "Toiture",
+    "Fenêtres",
+    "Isolation"
+  ]
+}
