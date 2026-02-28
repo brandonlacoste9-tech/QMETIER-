@@ -68,7 +68,41 @@
       "status": "new",
       "commission": 750,
       "createdAt": "2026-02-28T07:27:58.357Z"
+    },
+    {
+      "id": "LEAD-1772263762867",
+      "customer": {
+        "name": "Test User 2",
+        "email": "test2@example.com",
+        "phone": "514-555-1234"
+      },
+      "serviceType": "Plomberie",
+      "description": "Test project",
+      "location": "Montreal, QC",
+      "region": "Montreal",
+      "estimatedBudget": "10000$ - 25000$",
+      "urgency": "normal",
+      "status": "new",
+      "commission": 1500,
+      "createdAt": "2026-02-28T07:29:22.867Z"
+    },
+    {
+      "id": "LEAD-1772263808530",
+      "customer": {
+        "name": "Test User 3",
+        "email": "test3@example.com",
+        "phone": "514-555-1234"
+      },
+      "serviceType": "Chauffage",
+      "description": "Test project",
+      "location": "Montreal, QC",
+      "region": "Montreal",
+      "estimatedBudget": "5000$ - 10000$",
+      "urgency": "normal",
+      "status": "new",
+      "commission": 1125,
+      "createdAt": "2026-02-28T07:30:08.531Z"
     }
   ],
-  "lastUpdated": "2026-02-28T07:27:58.357Z"
+  "lastUpdated": "2026-02-28T07:30:08.531Z"
 }

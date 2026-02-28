@@ -280,10 +280,16 @@ app.post('/api/leads/submit', (req, res) => {
     // Extract numeric value from budget range for commission calculation
     let budgetValue = 0;
     if (estimatedBudget && estimatedBudget !== 'Non spécifié') {
-        // Extract first number from budget range (e.g., "5000$ - 10000$" -> 5000)
-        const match = estimatedBudget.match(/(\d+)/);
-        if (match) {
-            budgetValue = parseFloat(match[1]);
+        // Extract numbers from budget range (e.g., "5000$ - 10000$" -> midpoint 7500)
+        const numbers = estimatedBudget.match(/(\d+)/g);
+        if (numbers && numbers.length >= 2) {
+            // Use midpoint of range for more accurate commission estimate
+            const min = parseFloat(numbers[0]);
+            const max = parseFloat(numbers[1]);
+            budgetValue = (min + max) / 2;
+        } else if (numbers && numbers.length === 1) {
+            // Single value (e.g., "Moins de 1000$" -> use that value)
+            budgetValue = parseFloat(numbers[0]);
         }
     }
     
