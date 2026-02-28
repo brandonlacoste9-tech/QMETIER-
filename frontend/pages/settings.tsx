@@ -8,7 +8,11 @@ export default function SettingsPage() {
   return (
     <>
       <Head>
-        <title>{t('settings.title')} - Q-MÉTIER</title>
+        <title>Paramètres - Q-MÉTIER | Gérer Votre Compte</title>
+        <meta name="description" content="Gérez vos paramètres de compte Q-MÉTIER. Langue, notifications, profil et préférences." />
+        <meta name="keywords" content="paramètres compte, gérer profil, préférences, notifications, langue" />
+        <link rel="canonical" href="https://qmetier.ca/settings" />
+        <meta name="robots" content="noindex, follow" />
       </Head>
       
       <div className="min-h-screen bg-gray-50 py-12">

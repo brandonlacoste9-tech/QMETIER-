@@ -101,6 +101,7 @@
     "permissionDenied": "Location permission denied. Please enable in browser settings.",
     "notInCanada": "Location appears to be outside Canada"
   },
+  "provinces": {
     "bc": "British Columbia",
     "ab": "Alberta",
     "sk": "Saskatchewan",

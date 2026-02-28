@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import Head from 'next/head'
 import { loadStripe } from '@stripe/stripe-js'
 import axios from 'axios'
 import { useTranslation } from '../lib/i18n'
-import LanguageSwitcher from '../components/LanguageSwitcher'
+import SEOHead from '../components/SEOHead'
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY!)
 
@@ -37,9 +36,24 @@ export default function CreditsPage() {
   
   return (
     <>
-      <Head>
-        <title>{t('credits.title')} - Q-MÉTIER</title>
-      </Head>
+import Head from 'next/head'
+import { useTranslation } from '../lib/i18n'
+import SEOHead from '../components/SEOHead'
+
+export default function CreditsPage() {
+  const { t } = useTranslation()
+  
+  return (
+    <>
+      <SEOHead
+        titleFr="Acheter des Crédits - Q-MÉTIER | Forfaits pour Professionnels"
+        titleEn="Buy Credits - Q-MÉTIER | Packages for Professionals"
+        descriptionFr="Achetez des crédits pour soumettre des soumissions. Forfaits de 12, 24 ou 60 crédits. Sans commission, système transparent. Paiement sécurisé par Stripe."
+        descriptionEn="Buy credits to submit quotes. Packages of 12, 24 or 60 credits. No commission, transparent system. Secure payment by Stripe."
+        keywordsFr="crédits Q-MÉTIER, forfaits professionnels, soumissions, plateforme sans commission, acheter crédits, prix soumissions"
+        keywordsEn="Q-MÉTIER credits, professional packages, quotes, no commission platform, buy credits, quote pricing"
+        canonical="https://qmetier.ca/credits"
+      />
       
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4">

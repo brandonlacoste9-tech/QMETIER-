@@ -101,6 +101,7 @@
     "permissionDenied": "Permission de localisation refusée. Veuillez activer dans les paramètres du navigateur.",
     "notInCanada": "L'emplacement semble être en dehors du Canada"
   },
+  "provinces": {
     "bc": "Colombie-Britannique",
     "ab": "Alberta",
     "sk": "Saskatchewan",

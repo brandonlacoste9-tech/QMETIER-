@@ -6,9 +6,24 @@ export default function SafetyPage() {
   
   return (
     <>
-      <Head>
-        <title>Sécurité et Confiance - Q-MÉTIER</title>
-      </Head>
+import Head from 'next/head'
+import { useTranslation } from '../lib/i18n'
+import SEOHead from '../components/SEOHead'
+
+export default function SafetyPage() {
+  const { t } = useTranslation()
+  
+  return (
+    <>
+      <SEOHead
+        titleFr="Sécurité et Vérification - Q-MÉTIER | Professionnels Vérifiés au Québec"
+        titleEn="Safety and Verification - Q-MÉTIER | Verified Professionals in Quebec"
+        descriptionFr="Tous nos professionnels sont vérifiés. Vérification d'identité gratuite et vérification complète disponible. Évaluations et avis vérifiés. Confiance et sécurité garanties."
+        descriptionEn="All our professionals are verified. Free identity verification and full background check available. Verified reviews and ratings. Trust and safety guaranteed."
+        keywordsFr="professionnel vérifié Québec, vérification antécédents, sécurité, confiance, évaluations vérifiées, background check, Certn, RBQ, plombier vérifié, électricien vérifié"
+        keywordsEn="verified professional Quebec, background check, safety, trust, verified reviews, Certn, RBQ, verified plumber, verified electrician"
+        canonical="https://qmetier.ca/safety"
+      />
       
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-4xl mx-auto px-4">

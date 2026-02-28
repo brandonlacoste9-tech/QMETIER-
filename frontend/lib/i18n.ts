@@ -11,6 +11,9 @@ export function useTranslation() {
   const [locale, setLocale] = useState<Locale>('fr')  // Default to French for Quebec launch
   
   useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined') return
+    
     // Get saved locale from localStorage
     const saved = localStorage.getItem('locale') as Locale
     if (saved && (saved === 'en' || saved === 'fr')) {
@@ -29,7 +32,9 @@ export function useTranslation() {
   
   const changeLocale = (newLocale: Locale) => {
     setLocale(newLocale)
-    localStorage.setItem('locale', newLocale)
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('locale', newLocale)
+    }
   }
   
   const t = (key: string): string => {

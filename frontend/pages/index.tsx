@@ -1,16 +1,42 @@
 import { useState } from 'react'
-import Head from 'next/head'
 import { useTranslation } from '../lib/i18n'
-import LanguageSwitcher from '../components/LanguageSwitcher'
+import SEOHead from '../components/SEOHead'
 
 export default function HomePage() {
   const { t } = useTranslation()
   
   return (
     <>
-      <Head>
-        <title>Q-MÉTIER - {t('home.subtitle')}</title>
-      </Head>
+      <SEOHead
+        titleFr="Q-MÉTIER - Trouvez des Professionnels au Québec | Plombier, Électricien, Rénovation"
+        titleEn="Q-MÉTIER - Find Professionals in Quebec | Plumber, Electrician, Renovation"
+        descriptionFr="Plateforme québécoise pour trouver des professionnels vérifiés. Plombiers, électriciens, entrepreneurs en rénovation à Montréal, Québec et partout au Québec. Sans commission."
+        descriptionEn="Quebec platform to find verified professionals. Plumbers, electricians, renovation contractors in Montreal, Quebec City and across Quebec. No commission."
+        keywordsFr="plombier Montréal, électricien Montréal, rénovation Québec, entrepreneur général, déménagement, nettoyage, professionnel vérifié, plateforme québécoise"
+        keywordsEn="plumber Montreal, electrician Montreal, renovation Quebec, general contractor, moving, cleaning, verified professional, Quebec platform"
+        canonical="https://qmetier.ca"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Q-MÉTIER",
+          "description": "Plateforme québécoise pour connecter professionnels et clients",
+          "url": "https://qmetier.ca",
+          "foundingDate": "2026",
+          "foundingLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Montréal",
+              "addressRegion": "QC",
+              "addressCountry": "CA"
+            }
+          },
+          "areaServed": {
+            "@type": "State",
+            "name": "Quebec"
+          }
+        }}
+      />
       
       <div className="min-h-screen bg-gray-50">
         <header className="bg-white shadow">
