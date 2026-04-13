@@ -6,6 +6,6 @@ pydantic==2.5.3
 pydantic-settings==2.1.0
 stripe==7.11.0
 httpx==0.26.0
-python-multipart==0.0.6
-pytest==7.4.4
+python-multipart==0.0.22
+pytest==9.0.3
 pytest-asyncio==0.23.3
