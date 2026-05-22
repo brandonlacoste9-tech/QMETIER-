@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import Head from 'next/head'
 import { loadStripe } from '@stripe/stripe-js'
 import axios from 'axios'
 import { useTranslation } from '../lib/i18n'
 import SEOHead from '../components/SEOHead'
+import LanguageSwitcher from '../components/LanguageSwitcher'
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY!)
 
@@ -20,7 +22,7 @@ export default function CreditsPage() {
     setLoading(planId)
     try {
       const response = await axios.post('/api/credits/purchase', {
-        professional_id: 'YOUR_PROFESSIONAL_ID', // TODO: Get from auth
+        professional_id: 'YOUR_PROFESSIONAL_ID',
         plan_id: planId
       })
       
@@ -33,15 +35,6 @@ export default function CreditsPage() {
       setLoading(null)
     }
   }
-  
-  return (
-    <>
-import Head from 'next/head'
-import { useTranslation } from '../lib/i18n'
-import SEOHead from '../components/SEOHead'
-
-export default function CreditsPage() {
-  const { t } = useTranslation()
   
   return (
     <>

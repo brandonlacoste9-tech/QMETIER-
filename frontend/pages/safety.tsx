@@ -1,13 +1,6 @@
 import Head from 'next/head'
 import { useTranslation } from '../lib/i18n'
 
-export default function SafetyPage() {
-  const { t } = useTranslation()
-  
-  return (
-    <>
-import Head from 'next/head'
-import { useTranslation } from '../lib/i18n'
 import SEOHead from '../components/SEOHead'
 
 export default function SafetyPage() {
